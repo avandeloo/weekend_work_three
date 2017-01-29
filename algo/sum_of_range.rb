@@ -3,7 +3,15 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  sum = 0
+  start = array.min
+  ending = array.max
+  while start <= ending
+    sum += start
+    start += 1
+  end
+  
+  sum
 end
 
 # Driver code - don't touch anything below this line.

@@ -32,3 +32,72 @@ end
 # The add_a_crib method
 # The add_a_custom_amenity method
 
+puts "TESTING the HotelReservation class..."
+puts
+
+reservation = HotelReservation.new( 
+                                    customer_name: "John Doe",
+                                    date: "January 31, 2019",
+                                    room_number: 205
+                                  )
+
+if reservation != nil
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+
+puts "Testing room_number..."
+puts
+
+reservation.room_number = 405
+
+if reservation.room_number != "205"
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+
+puts "Testing add_a_fridge..."
+puts
+
+reservation.add_a_fridge
+
+if reservation.amenities.include?("fridge")
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+
+puts "Testing add_a_crib..."
+puts
+
+reservation.add_a_crib
+
+if reservation.amenities.include?("crib")
+  puts "PASS!"
+else
+  puts "F"
+end
+
+puts
+
+puts "Testing add_a_custom_amenity..."
+puts
+
+reservation.add_a_custom_amenity("table")
+
+if reservation.amenities.include?("table")
+  puts "PASS!"
+else
+  puts "F"
+end
+
+
+
