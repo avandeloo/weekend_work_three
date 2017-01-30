@@ -4,11 +4,9 @@
 
 def sum_of_range(array)
   sum = 0
-  start = array.min
-  ending = array.max
-  while start <= ending
-    sum += start
-    start += 1
+  range = (array.min..array.max).to_a
+  range.each do |item|
+    sum += item
   end
   
   sum

@@ -29,11 +29,7 @@ class Remote
   end
      
   def toggle_power
-    if @tv.power == false
-      @tv.power = true
-    else
-      @tv.power = false
-    end
+    !@tv.power
   end
 
   def increment_volume
